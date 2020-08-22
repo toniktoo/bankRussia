@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Для ant sliderа пришлось так залезать в верстку костыльно:( */
+
+.ant-slider-track {
+  background-color: #e42845;
+}
+.ant-slider:hover > .ant-slider-track {
+  background-color: rgb(7, 61, 89);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ant-slider-handle {
+  background-color: #e42845;
+  border: none;
+}
+
+.ant-slider:hover > .ant-slider-handle {
+  background-color: #e42845;
+  border: none;
 }
