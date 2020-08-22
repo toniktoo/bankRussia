@@ -34,7 +34,7 @@ const Column = styled.div`
 `;
 const ColumnItem = styled.span``;
 
-export const HeaderTime = () => {
+export const MenuRows = () => {
   return (
     <Wrapper>
       <HeadRow>Минимальные вклады (завист от кол-во дней)</HeadRow>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { ErrorHandler } from "./components/ErrorHandler";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 
@@ -15,7 +16,9 @@ const App = () => {
   return (
     <Wrapper>
       <Header />
-      <Main />
+      <ErrorHandler>
+        <Main />
+      </ErrorHandler>
     </Wrapper>
   );
 };

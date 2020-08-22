@@ -9,8 +9,8 @@ import {
 
 import dbCalc from "../../assets/depcalc.json";
 import { Menu, Dropdown, Tooltip } from "antd";
-import { ItemTime } from "../menu/ItemTime";
-import { HeaderTime } from "../menu/HeaderTime";
+import { MenuItem } from "../menu/MenuItem";
+import { MenuRows } from "../menu/MenuRows";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -84,7 +84,7 @@ export const CalcMenu = () => {
 
   const menuTimeDeposit = () => (
     <Menu>
-      <HeaderTime />
+      <MenuRows />
       {deposits
         .filter((item) => item.code === activeCodeDeposit)[0]
         .param.map((item) => {
@@ -93,7 +93,7 @@ export const CalcMenu = () => {
               key={item.period_from}
               onClick={() => setActiveTimeDeposit(item.period_from)}
             >
-              <ItemTime item={item} />
+              <MenuItem item={item} />
             </Menu.Item>
           );
         })}

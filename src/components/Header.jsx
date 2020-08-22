@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   line-height: 30px;
+  height: 60px;
 `;
 const TitleWrap = styled.div`
   color: rgb(7, 61, 89);

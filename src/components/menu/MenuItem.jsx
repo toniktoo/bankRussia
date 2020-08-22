@@ -20,7 +20,7 @@ const Column = styled.div`
 `;
 const ColumnItem = styled.span``;
 
-export const ItemTime = React.memo(({ item }) => {
+export const MenuItem = React.memo(({ item }) => {
   const { period_from, summs_and_rate } = item;
 
   return (
