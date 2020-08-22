@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { InputNumber } from "antd";
-import { Slide } from "react-awesome-reveal";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import styled from 'styled-components';
+import { InputNumber } from 'antd';
+import { Slide } from 'react-awesome-reveal';
+import { useDispatch } from 'react-redux';
 import {
   setInitValueDeposit,
   changeValueDeposit,
   changeTimeDeposit,
-} from "../../redux/actions/calc";
-import { addSpaceValueDeposit } from "../../helpers";
+} from '../../redux/actions/calc';
+import { addSpaceValueDeposit } from '../../helpers';
 
 const Wrapper = styled.div`
   width: 55%;
@@ -38,8 +38,7 @@ const renderDepositPeriod = (start, end) => {
   return `Вклад открывается от ${start} до ${end - 1} дн.`;
 };
 
-const renderMinValueDeposit = (value) =>
-  `Мин сумма вклада ${addSpaceValueDeposit(value)} ₽.`;
+const renderMinValueDeposit = (value) => `Мин сумма вклада ${addSpaceValueDeposit(value)} ₽.`;
 
 export const CalcForm = React.memo(
   ({ activeDeposit, valueDeposit, timeDeposit }) => {
@@ -49,17 +48,16 @@ export const CalcForm = React.memo(
       summs_and_rate: summs_and_rate_MIN,
       period_from: period_from_MIN,
     } = param[0];
-    const {
-      period_from: period_from_MAX,
-    } = param[1];
+    const { period_from: period_from_MAX } = param[1];
+
     React.useEffect(() => {
       dispatch(
         setInitValueDeposit({
           valueDeposit: summs_and_rate_MIN[0].summ_from,
           timeDeposit: period_from_MIN,
           rate: summs_and_rate_MIN[0].rate,
-          typeDeposit: name
-        })
+          typeDeposit: name,
+        }),
       );
     }, [dispatch]);
 
@@ -68,8 +66,8 @@ export const CalcForm = React.memo(
         changeValueDeposit({
           valueDeposit: value,
           rate: summs_and_rate_MIN[0].rate,
-          typeDeposit: name
-        })
+          typeDeposit: name,
+        }),
       );
     };
     const onChangeValueTime = (value) => {
@@ -77,8 +75,8 @@ export const CalcForm = React.memo(
         changeTimeDeposit({
           timeDeposit: value,
           rate: summs_and_rate_MIN[0].rate,
-          typeDeposit: name
-        })
+          typeDeposit: name,
+        }),
       );
     };
 
@@ -90,7 +88,7 @@ export const CalcForm = React.memo(
               <TitleItem>Сумма вклада в рублях:</TitleItem>
               <InputNumber
                 min={summs_and_rate_MIN[0].summ_from}
-                style={{ margin: "0 16px" }}
+                style={{ margin: '0 16px' }}
                 value={valueDeposit}
                 onChange={onChangeValueDeposit}
               />
@@ -105,7 +103,7 @@ export const CalcForm = React.memo(
               <InputNumber
                 min={period_from_MIN}
                 max={period_from_MAX - 1}
-                style={{ margin: "0 16px" }}
+                style={{ margin: '0 16px' }}
                 value={timeDeposit}
                 onChange={onChangeValueTime}
               />
@@ -115,5 +113,5 @@ export const CalcForm = React.memo(
         </Slide>
       </Wrapper>
     );
-  }
+  },
 );

@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
+import { Menu, Dropdown, Tooltip } from 'antd';
 import {
   actionSetInitDepositData,
   actionSetActiveTypeDeposit,
   actionSetActiveDeposit,
-} from "../../redux/actions/data";
+} from '../../redux/actions/data';
 
-import dbCalc from "../../assets/depcalc.json";
-import { Menu, Dropdown, Tooltip } from "antd";
-import { MenuItem } from "../menu/MenuItem";
-import { MenuRows } from "../menu/MenuRows";
+import dbCalc from '../../assets/depcalc.json';
+import { MenuItem } from '../menu/MenuItem';
+import { MenuRows } from '../menu/MenuRows';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -44,20 +44,19 @@ const DropdownBtnRight = styled(DropdownBtn)`
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `;
 
 export const CalcMenu = () => {
   const { deposits, activeCodeDeposit } = useSelector(
-    (state) => state.reducerData
+    (state) => state.reducerData,
   );
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(actionSetInitDepositData({ deposits: dbCalc.deposits }));
   }, [dispatch]);
 
-  const setActiveTypeDeposit = (code) =>
-    dispatch(actionSetActiveTypeDeposit(code));
+  const setActiveTypeDeposit = (code) => dispatch(actionSetActiveTypeDeposit(code));
 
   const menuTypesDeposit = () => (
     <Menu>
@@ -87,16 +86,14 @@ export const CalcMenu = () => {
       <MenuRows />
       {deposits
         .filter((item) => item.code === activeCodeDeposit)[0]
-        .param.map((item) => {
-          return (
-            <Menu.Item
-              key={item.period_from}
-              onClick={() => setActiveTimeDeposit(item.period_from)}
-            >
-              <MenuItem item={item} />
-            </Menu.Item>
-          );
-        })}
+        .param.map((item) => (
+          <Menu.Item
+            key={item.period_from}
+            onClick={() => setActiveTimeDeposit(item.period_from)}
+          >
+            <MenuItem item={item} />
+          </Menu.Item>
+        ))}
     </Menu>
   );
   return (

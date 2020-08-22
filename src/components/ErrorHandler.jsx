@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -18,16 +18,18 @@ export class ErrorHandler extends React.Component {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch() {
     // Можно также сохранить информацию об ошибке в соответствующую службу журнала ошибок
   }
 
   render() {
-    if (this.state.hasError) {
+    const { hasError } = this.state;
+    const { children } = this.props;
+    if (hasError) {
       return (
         <Wrapper>
           <ErrorMsg>
@@ -37,6 +39,6 @@ export class ErrorHandler extends React.Component {
       );
     }
 
-    return this.props.children;
+    return children;
   }
 }

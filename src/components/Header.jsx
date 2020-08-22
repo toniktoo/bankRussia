@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { PdfGenerator } from "./PdfGenerator";
+import { PdfGenerator } from './PdfGenerator';
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,19 +26,17 @@ const SubTitle = styled.h3`
 `;
 const Sidebar = styled.div``;
 
-export const Header = () => {
-  return (
-    <Wrapper>
-      <TitleWrap>
-        <Title>
-          <span>БАНК</span>
-          <span style={{ color: "#e42845" }}>РОССИЯ</span>
-        </Title>
-        <SubTitle>Банк умных решений</SubTitle>
-      </TitleWrap>
-      <Sidebar>
-        <PdfGenerator />
-      </Sidebar>
-    </Wrapper>
-  );
-};
+export const Header = () => (
+  <Wrapper>
+    <TitleWrap>
+      <Title>
+        <span>БАНК</span>
+        <span style={{ color: '#e42845' }}>РОССИЯ</span>
+      </Title>
+      <SubTitle>Банк умных решений</SubTitle>
+    </TitleWrap>
+    <Sidebar>
+      <PdfGenerator />
+    </Sidebar>
+  </Wrapper>
+);

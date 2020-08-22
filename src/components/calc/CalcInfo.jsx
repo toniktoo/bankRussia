@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Slide } from "react-awesome-reveal";
-import { addSpaceValueDeposit } from "../../helpers";
+import React from 'react';
+import styled from 'styled-components';
+import { Slide } from 'react-awesome-reveal';
+import { addSpaceValueDeposit } from '../../helpers';
 
 const Wrapper = styled.div`
   width: 40%;
@@ -17,11 +17,11 @@ export const CalcInfo = ({ activeDeposit, profit, timeDeposit }) => {
   return (
     <Wrapper>
       <Slide direction="right">
-        <Item>Тип вклада: {name}</Item>
-        <Item>Процентная ставка: {summs_and_rate_MIN[0].rate}%</Item>
+        <Item>{`Тип вклада: ${name}`}</Item>
+        <Item>{`Процентная ставка: ${summs_and_rate_MIN[0].rate}%`}</Item>
         <Item>
-          Доход за {timeDeposit} дн:
-          {` ${addSpaceValueDeposit(profit)} `}₽
+          {`Доход за ${timeDeposit} дн: ${addSpaceValueDeposit(profit)} `}
+          ₽
         </Item>
         <span>
           Расчеты калькулятора являются предварительными. Для расчета дохода

@@ -1,10 +1,10 @@
-import { handleActions } from "redux-actions";
+import { handleActions } from 'redux-actions';
 
 import {
   actionSetInitDepositData,
   actionSetActiveTypeDeposit,
   actionSetActiveDeposit,
-} from "../actions/data";
+} from '../actions/data';
 
 const initCalc = {
   deposits: null,
@@ -21,17 +21,15 @@ export const reducerData = handleActions(
         deposits,
       };
     },
-    [actionSetActiveTypeDeposit]: (state, { payload }) => {
-      return {
-        ...state,
-        activeCodeDeposit: payload,
-        activeDeposit: null,
-      };
-    },
+    [actionSetActiveTypeDeposit]: (state, { payload }) => ({
+      ...state,
+      activeCodeDeposit: payload,
+      activeDeposit: null,
+    }),
     [actionSetActiveDeposit]: (state, { payload }) => {
-      let indexActiveDeposit = undefined;
+      let indexActiveDeposit;
       const filtredCode = state.deposits.filter(
-        (item) => item.code === state.activeCodeDeposit
+        (item) => item.code === state.activeCodeDeposit,
       )[0];
 
       const filtedParam = {
@@ -50,12 +48,12 @@ export const reducerData = handleActions(
         activeDeposit:
           filtedParam.param.length === 1
             ? {
-                ...filtedParam,
-                param: [...filtedParam["param"], { period_from: Infinity }],
-              }
+              ...filtedParam,
+              param: [...filtedParam.param, { period_from: Infinity }],
+            }
             : filtedParam,
       };
     },
   },
-  initCalc
+  initCalc,
 );
