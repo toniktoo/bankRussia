@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/bankRussia/static/css/main.ac0c64d7.chunk.css",
+    "main.js": "/bankRussia/static/js/main.021222bb.chunk.js",
+    "main.js.map": "/bankRussia/static/js/main.021222bb.chunk.js.map",
+    "runtime-main.js": "/bankRussia/static/js/runtime-main.f5681c61.js",
+    "runtime-main.js.map": "/bankRussia/static/js/runtime-main.f5681c61.js.map",
+    "static/css/2.04ff9426.chunk.css": "/bankRussia/static/css/2.04ff9426.chunk.css",
+    "static/js/2.28bb4793.chunk.js": "/bankRussia/static/js/2.28bb4793.chunk.js",
+    "static/js/2.28bb4793.chunk.js.map": "/bankRussia/static/js/2.28bb4793.chunk.js.map",
+    "index.html": "/bankRussia/index.html",
+    "precache-manifest.2e12add11969f3ba57f26f82633385ec.js": "/bankRussia/precache-manifest.2e12add11969f3ba57f26f82633385ec.js",
+    "service-worker.js": "/bankRussia/service-worker.js",
+    "static/css/2.04ff9426.chunk.css.map": "/bankRussia/static/css/2.04ff9426.chunk.css.map",
+    "static/css/main.ac0c64d7.chunk.css.map": "/bankRussia/static/css/main.ac0c64d7.chunk.css.map",
+    "static/js/2.28bb4793.chunk.js.LICENSE.txt": "/bankRussia/static/js/2.28bb4793.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5681c61.js",
+    "static/css/2.04ff9426.chunk.css",
+    "static/js/2.28bb4793.chunk.js",
+    "static/css/main.ac0c64d7.chunk.css",
+    "static/js/main.021222bb.chunk.js"
+  ]
+}
