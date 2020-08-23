@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63cefcc092b252f06970c795e2df46e3",
+    "revision": "756ab3f7ced344064d499010d8763734",
     "url": "/bankRussia/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bankRussia/static/css/2.04ff9426.chunk.css"
   },
   {
-    "revision": "51d5a26059789864a1bc",
+    "revision": "bae56546159a21f8d0f9",
     "url": "/bankRussia/static/css/main.ac0c64d7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bankRussia/static/js/2.eca9a3ab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "51d5a26059789864a1bc",
-    "url": "/bankRussia/static/js/main.dc985c7a.chunk.js"
+    "revision": "bae56546159a21f8d0f9",
+    "url": "/bankRussia/static/js/main.49bff434.chunk.js"
   },
   {
     "revision": "41e01d7044d5cf7e8af9",

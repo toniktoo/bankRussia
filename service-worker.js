@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bankRussia/precache-manifest.e7b4c771bb58a0222ba258fac3fdb2cb.js"
+  "/bankRussia/precache-manifest.89a686666afba0bb981f03f406aa6f84.js"
 );
 
 self.addEventListener('message', (event) => {

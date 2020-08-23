@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bankRussia/static/css/main.ac0c64d7.chunk.css",
-    "main.js": "/bankRussia/static/js/main.dc985c7a.chunk.js",
-    "main.js.map": "/bankRussia/static/js/main.dc985c7a.chunk.js.map",
+    "main.js": "/bankRussia/static/js/main.49bff434.chunk.js",
+    "main.js.map": "/bankRussia/static/js/main.49bff434.chunk.js.map",
     "runtime-main.js": "/bankRussia/static/js/runtime-main.f5681c61.js",
     "runtime-main.js.map": "/bankRussia/static/js/runtime-main.f5681c61.js.map",
     "static/css/2.04ff9426.chunk.css": "/bankRussia/static/css/2.04ff9426.chunk.css",
     "static/js/2.eca9a3ab.chunk.js": "/bankRussia/static/js/2.eca9a3ab.chunk.js",
     "static/js/2.eca9a3ab.chunk.js.map": "/bankRussia/static/js/2.eca9a3ab.chunk.js.map",
     "index.html": "/bankRussia/index.html",
-    "precache-manifest.e7b4c771bb58a0222ba258fac3fdb2cb.js": "/bankRussia/precache-manifest.e7b4c771bb58a0222ba258fac3fdb2cb.js",
+    "precache-manifest.89a686666afba0bb981f03f406aa6f84.js": "/bankRussia/precache-manifest.89a686666afba0bb981f03f406aa6f84.js",
     "service-worker.js": "/bankRussia/service-worker.js",
     "static/css/2.04ff9426.chunk.css.map": "/bankRussia/static/css/2.04ff9426.chunk.css.map",
     "static/css/main.ac0c64d7.chunk.css.map": "/bankRussia/static/css/main.ac0c64d7.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.04ff9426.chunk.css",
     "static/js/2.eca9a3ab.chunk.js",
     "static/css/main.ac0c64d7.chunk.css",
-    "static/js/main.dc985c7a.chunk.js"
+    "static/js/main.49bff434.chunk.js"
   ]
 }
