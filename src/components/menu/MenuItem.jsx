@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -23,12 +23,11 @@ const ColumnItem = styled.span``;
 export const MenuItem = React.memo(({ item }) => {
   const { period_from, summs_and_rate } = item;
 
-  const renderColumn = (itemInfo) =>
-    itemInfo.map((item) => (
-      <Column key={item.id}>
-        <ColumnItem>{item.text}</ColumnItem>
-      </Column>
-    ));
+  const renderColumn = (itemInfo) => itemInfo.map((i) => (
+    <Column key={i.id}>
+      <ColumnItem>{i.text}</ColumnItem>
+    </Column>
+  ));
   const itemInfo = [
     { id: 0, text: `от ${period_from} дн.` },
     { id: 1, text: `от ${summs_and_rate[0].summ_from} ₽` },

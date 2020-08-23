@@ -6,11 +6,17 @@ import { Header } from './components/Header';
 import { Main } from './components/Main';
 
 const Wrapper = styled.div`
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   padding: 8px;
   margin: auto;
   display: flex;
   flex-direction: column;
+  
+  @media (max-width: 768px) {
+  max-width: 768px;
+  width: 100%;
+  }
 `;
 
 export const App = () => (

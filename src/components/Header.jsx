@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   line-height: 30px;
   height: 60px;
+  
 `;
 const TitleWrap = styled.div`
   color: rgb(7, 61, 89);
@@ -18,6 +19,9 @@ const Title = styled.div`
   font-size: 30px;
   & > span:not(:last-child) {
     margin-right: 8px;
+  }
+  @media (max-width: 768px) {
+  font-size: 26px;
   }
 `;
 const SubTitle = styled.h3`

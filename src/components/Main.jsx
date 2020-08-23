@@ -14,6 +14,10 @@ const Content = styled.div`
   display: flex;
   margin: 16px 0;
   height: 300px;
+  @media (max-width: 768px) {
+  flex-direction: column;
+  align-items: center;
+  }
 `;
 
 export const Main = () => (

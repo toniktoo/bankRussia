@@ -24,6 +24,12 @@ const Wrapper = styled.div`
 const Calculator = styled.div`
   width: 100%;
   height: 40px;
+  
+  @media (max-width: 768px) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  }
 `;
 const Title = styled.h1`
   color: rgb(7, 61, 89);
@@ -35,16 +41,31 @@ const DropdownBtn = styled.button`
   height: 40px;
   color: #ffffff;
   cursor: pointer;
+  
+  @media (max-width: 768px) {
+   width: 100%;
+  }
 `;
 const DropdownBtnLeft = styled(DropdownBtn)`
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+  
+  @media (max-width: 768px) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  }
 `;
 const DropdownBtnRight = styled(DropdownBtn)`
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  
+  @media (max-width: 768px) {
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  }
 `;
 
 export const CalcMenu = () => {

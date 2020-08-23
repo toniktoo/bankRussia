@@ -13,6 +13,10 @@ import { addSpaceValueDeposit } from '../../helpers';
 const Wrapper = styled.div`
   width: 55%;
   margin-right: 5%;
+  @media (max-width: 768px) {
+  width: 100%;
+  margin: 0 0 16px 0;
+  }
 `;
 const Item = styled.div`
   display: flex;
